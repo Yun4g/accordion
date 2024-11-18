@@ -1,33 +1,17 @@
-// document.addEventListener('DOMContentLoaded',  ()=>{
-//    let accordHeading = document.querySelectorAll('.accordionHeading');
-// let icons = document.querySelectorAll('.button');
+let accordHeading = document.querySelectorAll('.accordionHeading');
 
-//    accordHeading.forEach(button =>{
-//      button.addEventListener('click', () =>{
-//     let accordContent = button.nextElementSibling;
-     
-//      if (accordContent.style.display === 'flex' ) {
-//          accordContent.style.display = 'none'
-       
-//      } else {
-//          accordContent.style.display = 'flex'  
-          
-//      } 
+accordHeading.forEach(button =>{
+  console.log(button)
+let plus = document.querySelectorAll('.plus');
+let minus = document.querySelectorAll('.minus')
+  button.addEventListener('click', ()=> {
+     let accordContent = button.nextElementSibling;
+   console.log(accordContent)
 
 
+       accordContent.classList.toggle('expand');
+  })
 
-   
-        
-//      })
-//    })
-// })
+})
 
 
-document.querySelectorAll('.accordionHeading').forEach((heading) => {
-  heading.addEventListener('click', function () {
-      const accordionMessage = this.nextElementSibling;
-
-     
-      accordionMessage.classList.toggle('expanded');
-  });
-});
