@@ -59,18 +59,21 @@ body{
 .accordion :nth-child(1){
     border: none;
 }
-.accordionText{
-    border-top: 3px solid hsl(275, 100%, 97%);
-   height: fit-content;
-     display: flex;
-     flex-direction: column;
-     justify-content: center;
+
+.accordionText {
+    height: fit-content;
+   
+    overflow: hidden;
+
+
 }
+    
+/* 130 */
 .accordionHeading{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 9vh;
+  
 
     transform: translateY(10px);
    
@@ -88,24 +91,26 @@ body{
 
 .accordionMessage{
     margin-top: 1rem;
-
-    height: fit-content;
-
     padding-bottom: 10px;
-    display: none;
-    align-items: center;
-    justify-content: center;
+    display:flex;
+    height: 0px;
+    padding: 1px;
+    overflow: hidden;
+    transition: height 0.5s ease-out;
+    
+}
 
-
-    p{
+.accordionMessage.expanded{
+       height: 70px;
+       transition: height 0.s ease-in;
+}
+.accordionMessage p{
        
-        transition: display 2s ease-in-out ;
+
         font-size: 15px;
         color:  hsl(294, 4%, 55%);
         font-weight: 600;
     }
-}
-
 .minus{
     display: none;
     cursor: pointer;
